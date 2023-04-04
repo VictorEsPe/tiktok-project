@@ -1,0 +1,36 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.app-video {
+  height: 100vh;
+  max-height: 800px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: scroll;
+  /* esconde scrollbar no IE, edge e firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: y mandatory;
+}
+
+/* esconde scrollbar no chrome, opera e safari */
+.app-video::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 440px) {
+  .app-video {
+    width: 100%;
+    height: 100vh;
+  }
+}
